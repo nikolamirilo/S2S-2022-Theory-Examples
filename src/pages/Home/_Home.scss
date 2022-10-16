@@ -1,0 +1,23 @@
+.home {
+  @include flex(column, flex-start, center);
+  gap: 5rem;
+  min-height: 100vh;
+  height: fit-content;
+  width: 100%;
+  padding: 5% 10%;
+  @include media($sm) {
+    padding: 5% 5%;
+  }
+  @include media($xs) {
+    padding: 5% 1%;
+  }
+  h1 {
+    text-align: center;
+  }
+  .cards-container {
+    @include flex(row, space-around, center);
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 3rem;
+  }
+}

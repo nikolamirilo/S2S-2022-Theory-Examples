@@ -1,0 +1,21 @@
+.counter {
+  padding-top: 8%;
+  font-size: 2rem;
+  @include flex(column, center, center);
+  gap: 2rem;
+  p {
+    width: 18%;
+    margin: 0% auto;
+    text-align: center;
+    color: $black;
+  }
+  .counter-buttons {
+    @include flex(row, center, center);
+    width: 100%;
+    button {
+      padding: 0% 1%;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+}

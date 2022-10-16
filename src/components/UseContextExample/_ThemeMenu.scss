@@ -1,0 +1,14 @@
+.theme-menu {
+  @include flex(column, center, center);
+  height: 60vh;
+  gap: 2rem;
+  button {
+    font-size: 1.6rem;
+    padding: 0.5rem 2rem;
+  }
+  input {
+    font-size: 1.6rem;
+    padding: 0.3rem 1rem;
+    border: 1px solid $black;
+  }
+}

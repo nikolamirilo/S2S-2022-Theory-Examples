@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Home, RoutePage } from "./pages";
+import { Routes, Route, Link } from "react-router-dom";
+import { useTheme } from "./context/ThemeContext";
 
-function App() {
+const App = () => {
+  const { theme } = useTheme();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app" style={theme}>
+      <nav className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/counter">Counter</Link>
+        <Link to="/timer">Timer</Link>
+        <Link to="/theme-menu">Theme Menu</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/counter" element={<RoutePage type="counter" />} />
+        <Route path="/timer" element={<RoutePage type="timer" />} />
+        <Route path="/theme-menu" element={<RoutePage type="theme-menu" />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

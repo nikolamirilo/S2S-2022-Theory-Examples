@@ -1,0 +1,18 @@
+.card {
+  @include border;
+  .card-body {
+    width: 100%;
+    height: 100%;
+    color: $black;
+    background-color: $white;
+    @include flex(column, center, center);
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    .card-image {
+      @include backgroundObjectImage(20vw, 40vh);
+      @include media($xs) {
+        @include backgroundObjectImage(90vw, 40vh);
+      }
+    }
+  }
+}
